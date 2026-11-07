@@ -1,15 +1,11 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Sparkles } from "lucide-react";
-import { useContext } from "react";
 import { Link } from "react-router-dom";
 import logoImage from "@/assets/dose-academy-logo.png";
 import { APP_URL } from "@/lib/constants";
 import mascotImage from "@/assets/dose-mascot-custom.png";
-import { SlickChatContext } from "@/App";
 
 const Hero = () => {
-  const { open: openChat } = useContext(SlickChatContext);
-
   return (
     <section className="relative overflow-hidden bg-gradient-soft py-20 md:py-32">
       <div className="container mx-auto px-4">
@@ -71,12 +67,13 @@ const Hero = () => {
               </div>
             </div>
             
-            {/* Mascot - clickable to open chat */}
+            {/* Mascot - links into the app to chat with Slick (sign-in required) */}
             <div className="relative z-10 flex-shrink-0 animate-fade-in">
-              <button
-                type="button"
-                onClick={openChat}
-                aria-label="Chat with Slick, your AI companion"
+              <a
+                href={`${APP_URL}/auth`}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Chat with Slick in the app — sign in at learn.getdose.app"
                 className="group block cursor-pointer text-center rounded-3xl p-2 transition-all duration-300 hover:-translate-y-1 hover:shadow-medium focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 active:translate-y-0"
               >
                 <img
@@ -86,10 +83,12 @@ const Hero = () => {
                 />
                 <span className="mt-4 block text-2xl font-bold text-foreground">Meet Slick</span>
                 <span className="mt-2 block text-sm text-muted-foreground max-w-xs mx-auto">
-                  Your AI companion ready to guide you through every step of the app.
-                  <span className="ml-1 text-primary font-medium group-hover:underline">Chat now →</span>
+                  Your AI companion inside the app, ready to guide you through every step.
+                  <span className="ml-1 text-primary font-medium group-hover:underline">
+                    Chat with Slick in the app: sign in at learn.getdose.app →
+                  </span>
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>

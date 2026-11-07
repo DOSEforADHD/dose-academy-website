@@ -1,4 +1,5 @@
 import logoImage from "@/assets/dose-academy-logo.png";
+import { APP_URL } from "@/lib/constants";
 
 const Footer = () => {
   return (
@@ -31,7 +32,7 @@ const Footer = () => {
             <h3 className="font-semibold text-foreground mb-4">Company</h3>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li><a href="/about" className="hover:text-primary transition-colors">About Us</a></li>
-              <li><a href="/privacy-policy" className="hover:text-primary transition-colors">Privacy Policy</a></li>
+              <li><a href={`${APP_URL}/privacy`} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Privacy Policy</a></li>
               <li><a href="/terms-of-service" className="hover:text-primary transition-colors">Terms of Service</a></li>
               <li><a href="/contact" className="hover:text-primary transition-colors">Contact</a></li>
             </ul>
