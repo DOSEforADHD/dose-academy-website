@@ -38,4 +38,4 @@ npm run preview  # preview the production build locally
 
 ## Deployment
 
-The site is deployed on Vercel. Pushes to `main` trigger a production deploy.
+The site is hosted on AWS Amplify (app: `dose-academy-website`, branch `main` → `academy.getdose.app`, DNS in Route 53). Pushes to `main` trigger a production deploy.
