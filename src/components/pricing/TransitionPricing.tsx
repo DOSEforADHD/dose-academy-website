@@ -5,8 +5,8 @@ const TransitionPricing = () => {
   const benefits = [
     {
       icon: GraduationCap,
-      title: "Age 18 Graduation Discount",
-      description: "Get 6 months at 50% off when transitioning to adult platform",
+      title: "Age 18 Graduation Discount on DOSE",
+      description: "Get 6 months at 50% off when moving to the flagship DOSE platform",
       price: "$7.50/month"
     },
     {
@@ -24,7 +24,7 @@ const TransitionPricing = () => {
     {
       icon: Users,
       title: "Loyalty Rewards",
-      description: "Years in Academy = months of discount on adult platform",
+      description: "Years in Academy = months of discount on DOSE",
       price: "Varies"
     }
   ];
@@ -34,11 +34,26 @@ const TransitionPricing = () => {
       <div className="container mx-auto max-w-6xl">
         <div className="text-center mb-12">
           <GraduationCap className="h-12 w-12 mx-auto mb-4 text-primary" />
+          <p className="text-sm font-semibold uppercase tracking-wide text-primary mb-3">
+            For our flagship DOSE platform
+          </p>
           <h2 className="text-4xl font-bold mb-4 text-foreground">
-            Transition Pricing for Graduating Students
+            Graduating to DOSE at 18
           </h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            We support your journey from teen to young adult with special pricing and seamless data migration
+            DOSE Academy stays free. When a student turns 18, they can move up to DOSE, our flagship ADHD
+            platform for adults, with special transition pricing and seamless data migration.
+          </p>
+          <p className="mt-4 text-base text-muted-foreground">
+            Learn more about DOSE at{" "}
+            <a
+              href="https://getdose.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-semibold text-primary underline underline-offset-4 hover:text-primary/80"
+            >
+              getdose.app
+            </a>
           </p>
         </div>
 
@@ -65,7 +80,7 @@ const TransitionPricing = () => {
             <div>
               <h4 className="font-semibold mb-3 text-foreground">📊 Data Migration</h4>
               <p className="text-sm text-muted-foreground">
-                All your progress, goals, and achievements transfer seamlessly to the adult platform
+                All your progress, goals, and achievements transfer seamlessly to DOSE
               </p>
             </div>
             <div>

@@ -38,7 +38,7 @@ const CTA = () => {
           </div>
           
           <p className="mt-8 text-sm text-white">
-            Family plans starting at $14.99/month • School partnerships available
+            Free for every teen and family • Custom packages for schools
           </p>
         </div>
       </div>

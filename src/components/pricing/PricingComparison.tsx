@@ -22,7 +22,7 @@ const PricingComparison = () => {
       category: "Family & Oversight",
       items: [
         { name: "Parent Dashboard", teen: true, family: true, school: true },
-        { name: "Adult DOSE Account", teen: false, family: true, school: false },
+        { name: "Parent Account", teen: false, family: true, school: false },
         { name: "Up to 3 Teen Accounts", teen: false, family: true, school: false },
         { name: "Family Progress Dashboard", teen: false, family: true, school: false },
         { name: "Coordinated Goal Setting", teen: false, family: true, school: false },
@@ -65,9 +65,9 @@ const PricingComparison = () => {
                   <thead className="bg-accent">
                     <tr>
                       <th className="text-left p-4 font-semibold text-foreground">Features</th>
-                      <th className="text-center p-4 font-semibold text-foreground">Teen Only<br /><span className="text-sm font-normal text-muted-foreground">$9.99/mo</span></th>
-                      <th className="text-center p-4 font-semibold text-foreground bg-primary/10">Family Plan<br /><span className="text-sm font-normal text-muted-foreground">$14.99/mo</span></th>
-                      <th className="text-center p-4 font-semibold text-foreground">School Districts<br /><span className="text-sm font-normal text-muted-foreground">From $2/mo</span></th>
+                      <th className="text-center p-4 font-semibold text-foreground">Teen Only<br /><span className="text-sm font-normal text-muted-foreground">Free</span></th>
+                      <th className="text-center p-4 font-semibold text-foreground bg-primary/10">Family Plan<br /><span className="text-sm font-normal text-muted-foreground">Free</span></th>
+                      <th className="text-center p-4 font-semibold text-foreground">School Districts<br /><span className="text-sm font-normal text-muted-foreground">Contact us</span></th>
                     </tr>
                   </thead>
                   <tbody>

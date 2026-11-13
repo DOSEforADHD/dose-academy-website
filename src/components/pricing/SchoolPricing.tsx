@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Button } from "@/components/ui/button";
 import { GraduationCap, Users, Building2, Network, ChevronDown } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
@@ -11,28 +13,28 @@ const SchoolPricing = () => {
       icon: Users,
       name: "Small District",
       students: "100-500 students",
-      price: "$3/student/month",
+      price: "Custom package",
       color: "text-primary"
     },
     {
       icon: Building2,
       name: "Medium District",
       students: "500-2,000 students",
-      price: "$2.50/student/month",
+      price: "Custom package",
       color: "text-primary"
     },
     {
       icon: GraduationCap,
       name: "Large District",
       students: "2,000+ students",
-      price: "$2/student/month",
+      price: "Custom package",
       color: "text-primary"
     },
     {
       icon: Network,
       name: "Enterprise",
       students: "Multi-district",
-      price: "Custom pricing",
+      price: "Custom package",
       color: "text-secondary"
     }
   ];
@@ -42,12 +44,15 @@ const SchoolPricing = () => {
       <div className="container mx-auto max-w-6xl">
         <Collapsible open={isOpen} onOpenChange={setIsOpen}>
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-4 text-foreground">School District Pricing</h2>
+            <h2 className="text-4xl font-bold mb-4 text-foreground">Schools &amp; Districts</h2>
             <p className="text-xl text-muted-foreground mb-6">
-              Tiered pricing designed to scale with your district
+              Contact us for a custom package built around your school or district
             </p>
+            <Button size="lg" variant="secondary" className="mb-6" asChild>
+              <Link to="/contact">Contact Us</Link>
+            </Button>
             <CollapsibleTrigger className="text-primary hover:text-primary/80 flex items-center gap-2 mx-auto">
-              <span className="font-semibold">View Detailed Breakdown</span>
+              <span className="font-semibold">See What's Included</span>
               <ChevronDown className={cn("h-5 w-5 transition-transform", isOpen && "rotate-180")} />
             </CollapsibleTrigger>
           </div>

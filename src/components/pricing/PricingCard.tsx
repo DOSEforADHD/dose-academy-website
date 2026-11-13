@@ -3,17 +3,21 @@ import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { Link } from "react-router-dom";
 
 interface PricingCardProps {
   title: string;
   subtitle: string;
   price: string;
-  period: string;
+  /** Omit for non-numeric prices like "Free" or "Custom" */
+  period?: string;
   originalPrice?: string;
   description: string;
   features: string[];
   ctaText: string;
   ctaVariant?: "default" | "outline" | "secondary";
+  /** External URL (opens in new tab) or internal route starting with "/" */
+  ctaHref?: string;
   highlighted?: boolean;
   badge?: string;
 }
@@ -28,6 +32,7 @@ const PricingCard = ({
   features,
   ctaText,
   ctaVariant = "default",
+  ctaHref,
   highlighted = false,
   badge,
 }: PricingCardProps) => {
@@ -57,8 +62,10 @@ const PricingCard = ({
               ${originalPrice}
             </span>
           )}
-          <span className="text-5xl font-bold text-foreground">${price}</span>
-          <span className="text-muted-foreground">/{period}</span>
+          <span className="text-5xl font-bold text-foreground">
+            {/^[\d.]+$/.test(price) ? `$${price}` : price}
+          </span>
+          {period && <span className="text-muted-foreground">/{period}</span>}
         </div>
       </div>
       
@@ -79,8 +86,17 @@ const PricingCard = ({
         variant={ctaVariant}
         className="w-full"
         size="lg"
+        asChild={!!ctaHref}
       >
-        {ctaText}
+        {ctaHref?.startsWith("/") ? (
+          <Link to={ctaHref}>{ctaText}</Link>
+        ) : ctaHref ? (
+          <a href={ctaHref} target="_blank" rel="noopener noreferrer">
+            {ctaText}
+          </a>
+        ) : (
+          ctaText
+        )}
       </Button>
     </Card>
   );

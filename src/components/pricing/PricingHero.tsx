@@ -1,4 +1,4 @@
-import { Shield, Clock, CheckCircle2 } from "lucide-react";
+import { Shield, CreditCard, CheckCircle2 } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import logoImage from "@/assets/dose-academy-logo.png";
 
@@ -15,20 +15,20 @@ const PricingHero = () => {
         </div>
         
         <h1 className="text-5xl font-bold mb-6 text-foreground">
-          Flexible Pricing for Every Family
+          Free for Every Teen and Family
         </h1>
         <p className="text-xl text-muted-foreground mb-10">
-          Choose the plan that works for your teen's ADHD journey
+          Every DOSE Academy tool, free for individuals and parents. Custom packages for schools and districts.
         </p>
         
         <div className="flex flex-wrap justify-center gap-6">
           <Badge variant="outline" className="px-4 py-2 text-sm flex items-center gap-2">
             <CheckCircle2 className="h-4 w-4 text-success" />
-            30-Day Money-Back Guarantee
+            Free for Individuals &amp; Parents
           </Badge>
           <Badge variant="outline" className="px-4 py-2 text-sm flex items-center gap-2">
-            <Clock className="h-4 w-4 text-primary" />
-            Cancel Anytime
+            <CreditCard className="h-4 w-4 text-primary" />
+            No Credit Card Required
           </Badge>
           <Badge variant="outline" className="px-4 py-2 text-sm flex items-center gap-2">
             <Shield className="h-4 w-4 text-primary" />
